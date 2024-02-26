@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+#canvas1 {
+  background-color: black;
+  height: 80vh;
+  position: absolute;
+  bottom: 20px;
+}
+
+#header {
+  position: absolute;
+  left: 1px;
+  top: -100px;
+  padding: 0 2rem;
+  margin: 0.5rem;
+  background-color: transparent;
+  z-index: 1;
+  opacity: 0;
+}
+#header h1 {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-family: "Bebas Neue", sans-serif;
+  color: rgb(136, 136, 136);
+  font-size: 4em;
+  font-weight: 200;
+  letter-spacing: 5px;
+  text-transform: none;
+  background-color: transparent;
+}
+
+.reflection, .reflection::before {
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 0;
+}
+
+@keyframes reflection {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.reflection, .reflection::before, .reflection::after {
+  position: relative;
+  animation-name: reflection;
+  -moz-animation-name: reflection;
+  animation-duration: 3s;
+  -moz-animation-duration: 3s;
+}
+
+.reflection::before {
+  content: "Derek Gray";
+  top: 125px;
+  transform: scale(1, -1);
+  backface-visibility: visible;
+  z-index: 1;
+}
+
+.reflection::after {
+  content: "";
+  display: block;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgb(0, 0, 0) 80%);
+  z-index: 2;
+  background-color: transparent;
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+}
+#container #links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: transparent;
+  margin: 30vh 0 0 0.5rem;
+  padding: 0 2rem;
+  font-size: 1.2em;
+  font-weight: 200;
+  letter-spacing: 5px;
+}
+#container #links a {
+  background-color: transparent;
+  text-decoration: none;
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  color: rgb(200, 200, 200);
+  font-weight: 300;
+  letter-spacing: 10px;
+}
+#container #links a h4 {
+  margin-top: 3rem;
+  background-color: transparent;
+}
+#container #links a:hover {
+  color: rgb(232, 232, 186);
+}
+#container #links #about {
+  position: relative;
+  display: flex;
+  left: -200px;
+  opacity: 0;
+}
+#container #links #employment {
+  position: relative;
+  display: flex;
+  left: -200px;
+  opacity: 0;
+}
+#container #links #projects {
+  position: relative;
+  display: flex;
+  left: -200px;
+  opacity: 0;
+}
+#container .intro {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: justify;
+  width: 100%;
+  padding: 3rem;
+  background-color: transparent;
+  color: rgb(180, 180, 180);
+  opacity: 0;
+}
+#container .intro p {
+  width: 90%;
+  background-color: transparent;
+  color: rgb(225, 225, 255);
+  font-family: "Titillium", sans-serif;
+  font-weight: 200;
+}
+
+#eyeImage {
+  display: none;
+  /* position: absolute; */
+}/*# sourceMappingURL=style.css.map */
