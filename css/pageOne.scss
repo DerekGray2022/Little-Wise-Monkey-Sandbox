@@ -9,17 +9,36 @@
 body
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+//      PAGE ONE
+#pageOne
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
 }
 
 
 //      CANVAS
 #canvas1
 {
-    background-color: black;
+    // background-color: black;
     height: 80vh;
     position: absolute;
-    bottom: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+
+//      IMAGE
+#eyeImage
+{
+    display: none;
 }
 
 
@@ -27,6 +46,7 @@ body
 #header
 {
     position: absolute;
+    display: block;
     left: 1px;
     top: -100px;
     padding: 0 2rem;
@@ -41,12 +61,12 @@ body
         display: inline-block;
         width: 100%;
         font-family: 'Bebas Neue', sans-serif;
+        background-color: transparent;
         color: rgba(136, 136, 136, 1);
-        font-size: 4em;
+        font-size: 2.5em;
         font-weight: 200;
         letter-spacing: 5px;
         text-transform: none;
-        background-color: transparent;
     }
 }
 
@@ -78,17 +98,17 @@ body
 .reflection::before
 {
     content: 'Derek Gray';
-    top: 125px;
+    top: 80px;
     transform: scale(1, -1);
     backface-visibility: visible;
-    z-index: 1;
+    // z-index: 1;
 }
 
 .reflection::after
 {
     content: '';
     display: block;
-    top: -20px;
+    top: -10px;
     left: 0;
     width: 100%;
     height: 60px;
@@ -101,8 +121,6 @@ body
 //      LINKS CONTAINER
 #container
 {
-    width: 100%;
-    height: 100vh;
 
     #links
     {
@@ -111,9 +129,9 @@ body
         flex-direction: column;
         align-items: flex-start;
         background-color: transparent;
-        margin: 30vh 0 0 0.5rem;
+        margin: 25vh 0 0 0.5rem;
         padding: 0 2rem;
-        font-size: 1.2em;
+        font-size: 1em;
         font-weight: 200;
         letter-spacing: 5px;
 
@@ -129,7 +147,6 @@ body
 
             h4
             {
-                margin-top: 3rem;
                 background-color: transparent;
             }
 
@@ -153,6 +170,7 @@ body
             display: flex;
             left: -200px;
             opacity: 0;
+            margin-top: 3rem;
         }
 
         #projects
@@ -161,41 +179,60 @@ body
             display: flex;
             left: -200px;
             opacity: 0;
+            margin-top: 3rem;
         }
     }
 
+    //      INTRODUCTION
     .intro
     {
-        position: absolute;
+        position: relative;
         display: flex;
+        flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
         text-align: justify;
         width: 100%;
-        // margin: 0 auto 10rem;
-        padding: 3rem;
+        padding: 9.5rem 0 0 2rem;
         background-color: transparent;
-        color: rgba(180, 180, 180, 1);
         opacity: 0;
+        z-index: 1;
 
         p
         {
-            width: 90%;
+            position: relative;
+            width: 70vw;
+            margin: 1rem auto 0 1rem;
             background-color: transparent;
-            color: rgba(225, 225, 255, 1);
+            color: rgb(248, 248, 182);
             font-family: 'Titillium', sans-serif;
+            font-size: 0.75em;
             font-weight: 200;
+        }
+
+        .hidden-xsm
+        {
+            opacity: 0;
+            background-color: transparent;
+        }
+
+        .hidden-sm
+        {
+            display: none;
+            opacity: 0;
+            background-color: transparent;
         }
     }
 }
 
 
-//      IMAGE
-#eyeImage
+////        MEDIA QUERIES       ////
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) 
 {
-    display: none;
-    /* position: absolute; */
+
 }
+
 
 
 
