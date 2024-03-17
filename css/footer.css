@@ -1,0 +1,12 @@
+.footer {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background-color: #aaa;
+  color: #222;
+  z-index: 99;
+}
+.footer h1 {
+  text-align: center;
+  margin: 1rem auto;
+}/*# sourceMappingURL=footer.css.map */

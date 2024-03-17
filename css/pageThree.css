@@ -1,0 +1,13 @@
+#pageThree {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+#pageThree h1 {
+  background-color: transparent;
+  margin: 2rem auto;
+}/*# sourceMappingURL=pageThree.css.map */

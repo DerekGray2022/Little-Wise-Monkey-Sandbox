@@ -1,0 +1,54 @@
+.spacer
+{
+    height: 100px;
+    background-color: white;
+
+    
+
+    .divA
+    {
+        position: absolute;
+        left: 0;
+        height: 100px;
+        width: 100%;
+        background: black;
+        background: linear-gradient(180deg, rgb(66, 1, 74), rgba(255, 255, 255, 1) );
+        opacity: 1;
+    }
+
+    // .divB
+    // {
+    //     position: absolute;
+    //     left: 0;
+    //     height: 100px;
+    //     width: 100%;
+    //     background: transparent;
+    //     background: linear-gradient(175deg, rgba(12, 2, 195, 1), rgba(255, 255, 255, 1));
+    //     opacity: 0.5;
+    // }
+
+    // .divC
+    // {
+    //     position: absolute;
+    //     left: 0;
+    //     height: 100px;
+    //     width: 100%;
+    //     background: transparent;
+    //     background: linear-gradient(175deg, rgba(121, 1, 113, 1), rgba(255, 255, 255, 1));
+    //     opacity: 0.5;
+    // }
+
+    // .divD
+    // {
+    //     position: absolute;
+    //     left: 0;
+    //     height: 100px;
+    //     width: 100%;
+    //     background: transparent;
+    //     background: linear-gradient(180deg, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
+    //     opacity: 1;
+    // }
+}
+
+
+
