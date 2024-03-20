@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: rgb(0, 0, 0);
 }
 
 body
@@ -20,22 +21,39 @@ body
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background-color: black;
 }
 
 
 //      CANVAS
 #canvas1
 {
-    // background-color: black;
+    background-color: rgb(0, 0, 0);
     height: 80vh;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translate(0, -50%);
 }
 
+    //      ARROW SVG
+    #arrow
+    {
+        position: absolute;
+        display: flex;
+        bottom: 100vh;
+        left: 0;
+        height: 20px;
+        opacity: 0;
+        z-index: 1;
+        background-color: transparent;
 
-//      IMAGE
+        #path
+        {
+            stroke: rgb(248, 248, 182);
+        }
+
+    }
+
+//      EYE IMAGE
 #eyeImage
 {
     display: none;
@@ -45,7 +63,7 @@ body
 //      HEADER
 #header
 {
-    position: relative;
+    position: absolute;
     display: block;
     left: 1px;
     top: -100px;
@@ -101,7 +119,6 @@ body
     top: 80px;
     transform: scale(1, -1);
     backface-visibility: visible;
-    // z-index: 1;
 }
 
 .reflection::after
@@ -187,14 +204,13 @@ body
     .intro
     {
         position: relative;
-        top: 100px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
-        text-align: justify;
+        text-align: flex-end;
         width: 100%;
-        padding: 5rem 0 0 2rem;
+        padding: 8rem 0 0 3rem;
         background-color: transparent;
         opacity: 0;
         z-index: 1;
@@ -203,12 +219,32 @@ body
         {
             position: relative;
             width: 70vw;
-            margin: 1rem auto 0 1rem;
+            margin: 1rem;
             background-color: transparent;
             color: rgb(248, 248, 182);
             font-family: 'Titillium', sans-serif;
-            font-size: 0.75em;
+            font-size: 1rem;
             font-weight: 200;
+        }
+
+        .title
+        {
+            font-size: 1.3rem;
+            background-color: transparent;
+        }
+
+        .title-art
+        {
+            color: rgb(254, 185, 185);
+        }
+
+        .title-press
+        {
+            color: rgb(185, 254, 185);
+        }
+        .title-software
+        {
+            color: rgb(185, 185, 254);
         }
 
         .hidden-xsm
@@ -226,26 +262,13 @@ body
     }
 }
 
-#arrow
-{
-    display: flex;
-    position: relative;
-    left: 10px;
-    bottom: 25px;
-    height: 75px;
-    width: auto;
-    background-color: transparent;
-    opacity: 0;
-    z-index: 99;
-}
 
+// ////        MEDIA QUERIES       ////
+// /* Extra small devices (phones, 600px and down) */
+// @media only screen and (max-width: 600px) 
+// {
 
-////        MEDIA QUERIES       ////
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) 
-{
-
-}
+// }
 
 
 
